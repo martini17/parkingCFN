@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horas",
+  "info": {
+    "singularName": "hora",
+    "pluralName": "horas",
+    "displayName": "Hora"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valor_hora": {
+      "type": "biginteger"
+    },
+    "vehiculo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehiculo.vehiculo",
+      "inversedBy": "hora"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehiculos",
+  "info": {
+    "singularName": "vehiculo",
+    "pluralName": "vehiculos",
+    "displayName": "Vehiculo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "placa": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tipo_vehiculo": {
+      "type": "enumeration",
+      "enum": [
+        "BICICLETA",
+        "MOTO",
+        "CARRO",
+        "CAMIONETA",
+        "CAMION"
+      ]
+    },
+    "hora": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hora.hora",
+      "inversedBy": "vehiculo"
+    }
+  }
+}
